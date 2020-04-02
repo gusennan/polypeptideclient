@@ -2,4 +2,4 @@
 
 __author__ = """Nate Guerin"""
 __email__ = 'nate@textpla.in'
-__version__ = '0.2.1'
+__version__ = '0.2.2'
