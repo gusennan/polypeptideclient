@@ -1,15 +1,14 @@
 """Console script for polypeptideclient."""
 import sys
 import click
+from polypeptideclient import Client
 
 
 @click.command()
 def main(args=None):
-    """Console script for polypeptideclient."""
-    click.echo("Replace this message by putting your code into "
-               "polypeptideclient.cli.main")
-    click.echo("See click documentation at https://click.palletsprojects.com/")
-    return 0
+    client = Client('http://localhost:7071')
+    response = client.codon_hamming_distance([['ala', 'met'], ['val', 'met']])
+    print(response)
 
 
 if __name__ == "__main__":
